@@ -9,7 +9,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true, // null if using Google login
       },
-      google_id: {
+      googleId: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      profilePicture: {
         type: DataTypes.STRING,
         allowNull: true,
       },
