@@ -10,10 +10,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-// Basic test route
-app.get('/', (req, res) => res.send('✅ API is running'));
-
 // Database sync & server start
 db.sequelize.sync({ force: true }) 
   .then(() => {
@@ -30,4 +26,5 @@ db.sequelize.sync({ force: true })
 
 
 app.use("/users", require("./app/routes/user.routes"));
-app.use("/list", require("./app/routes/userMovieList.routes"));
+app.use('/movies', require('./app/routes/movie.routes'));
+app.use('/user-movie-list', require('./app/routes/userMovieList.routes'));
