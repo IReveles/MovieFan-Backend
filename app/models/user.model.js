@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: true, // null if using Google login
+        allowNull: true,
       },
       googleId: {
         type: DataTypes.STRING,

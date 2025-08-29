@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: true,
       },
+      is_favorite: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      }
     });
   
     return UserMovieList;
